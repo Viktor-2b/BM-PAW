@@ -1,5 +1,5 @@
 import random
-from optimizer import optimize_r1_r2, calculate_c
+from optimizer import optimize_r, calculate_c
 
 
 class Simulator:
@@ -9,7 +9,7 @@ class Simulator:
     BM-PAW攻击过程，并计算各方收益，从而验证理论模型的正确性。
     """
 
-    def __init__(self, alpha, beta, eta, gamma, epsilon1, epsilon2):
+    def __init__(self, alpha, beta, eta, gamma, epsilon1, epsilon2, grid_density=101):
         """
         初始化模拟器。
         :param alpha: 攻击者算力
@@ -35,8 +35,10 @@ class Simulator:
             raise ValueError("所有已知矿池算力之和必须小于1")
 
         # 3. 调用优化器，找到并保存最优的 r1 和 r2  TODO 四重网格搜索
-        optimal_r1, optimal_r2 = optimize_r1_r2(
-            self.alpha, self.beta, self.eta, self.gamma, self.epsilon1, self.epsilon2
+        optimal_r1, optimal_r2, _  = optimize_r(
+            self.alpha, self.beta, self.eta, self.gamma,
+            self.epsilon1, self.epsilon2,
+            grid_density
         )
         self.r1 = optimal_r1
         self.r2 = optimal_r2
@@ -90,7 +92,6 @@ class Simulator:
 
             elif state == 'WITHHOLDING':
                 denominator = 1.0 - self.r2 * self.alpha  # 扣块后的总和算力
-                if denominator <= 1e-9: denominator = 1e-9  # 避免除以零
 
                 # 计算攻击者获胜概率
                 c_probs = calculate_c(self.alpha, self.beta, self.eta, self.gamma, self.delta, self.r2)
@@ -128,15 +129,16 @@ class Simulator:
                 else:
                     # Case 5-4 target
                     # --- BM-PAW 逻辑 ---
-                    cond = self.epsilon2*share_r_bar > 1 - c_probs["c_5_4_deny"]
+                    cond = c_probs["c_5_4_accept"] > c_probs["c_5_4_deny"]
+                    # cond = self.epsilon2*share_r_bar > 1 - c_probs["c_5_4_deny"]
                     if cond: # 目标接受贿赂
                         if random.random() < c_probs["c_5_4_accept"]:
                             attacker_reward_bm_paw += share_r_bar
                         attacker_reward_bm_paw -= self.epsilon2 * share_r_bar
                         target_reward_bm_paw += self.epsilon2 * share_r_bar
-                    else:  # 目标拒绝贿赂
+                    else: # 目标拒绝贿赂
                         if random.random() < c_probs["c_5_4_deny"]:
-                            attacker_reward_bm_paw += share_r_bar
+                            attacker_reward_bm_paw += 0.01*share_r_bar
                         else:
                             target_reward_bm_paw += block_reward
                     # --- PAW 基线逻辑 ---

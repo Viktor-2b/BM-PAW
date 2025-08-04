@@ -23,7 +23,8 @@ def run_epsilon_sensitivity_exp(params, fixed_args):
         eta=fixed_args['eta'],
         gamma=fixed_args['gamma'],
         epsilon1=eps1,
-        epsilon2=eps2
+        epsilon2=eps2,
+        grid_density=fixed_args['grid_density']
     )
 
     # 2. 运行模拟
@@ -41,13 +42,14 @@ if __name__ == '__main__':
     # --- 1. 定义实验参数 ---
     fixed_params = {
         'alpha': 0.2, 'beta': 0.2, 'eta': 0.2, 'gamma': 0.5,
-        'num_rounds': 10000  # 轮数现在也是固定参数
+        'num_rounds': 10000,
+        'grid_density':101
     }
 
     # 变化的参数 (网格密度，可以调整以平衡速度和精度)
     grid_density = 200 # 50x50的网格，总共2500次模拟。如果想更快，可以改成20
     epsilon1_range = np.linspace(0, 1, grid_density)
-    epsilon2_range = np.linspace(0, 3, grid_density)
+    epsilon2_range = np.linspace(0, 1, grid_density)
     # 创建所有任务参数的列表
     tasks = [(eps1, eps2) for eps2 in epsilon2_range for eps1 in epsilon1_range]
     # 使用除一个核心外的所有核心，避免电脑卡死
