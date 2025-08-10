@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9327baea-2697-4cfc-8c14-48a1dfd56771" name="更改" comment="初始版本">
-      <change afterPath="$PROJECT_DIR$/dpsk.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exp_r1_r2_optimal.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gemini.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gpt.py" afterDir="false" />
+    <list default="true" id="9327baea-2697-4cfc-8c14-48a1dfd56771" name="更改" comment="复现表格1&#10;optimizer.py和exp_r1_r2_optimal">
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dpsk.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exp_r1_r2_optimal.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp_r1_r2_optimal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gemini.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gpt.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/optimizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/optimizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimizer1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_epsilon_sensitivity_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_epsilon_sensitivity_exp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_r1_r2_optimal.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_r1_r2_optimal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyze_results.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +43,16 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.GPT.executor": "Run",
     "Python.analyze_results.executor": "Run",
-    "Python.exp_r1_r2_optimal.executor": "Debug",
+    "Python.dpsk.executor": "Run",
+    "Python.exp_r1_r2_optimal.executor": "Run",
     "Python.experiment.executor": "Run",
+    "Python.gemini-1.executor": "Run",
     "Python.gemini.executor": "Run",
     "Python.gpt.executor": "Run",
     "Python.optimizer.executor": "Run",
+    "Python.origin.executor": "Run",
     "Python.ploter.executor": "Run",
     "Python.reproduce.executor": "Run",
     "Python.run.executor": "Run",
@@ -61,6 +61,7 @@
     "Python.simulator.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "deletionFromPopupRequiresConfirmation": "false",
@@ -69,28 +70,6 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="analyze_results" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BM-PAM" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analyze_results.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="run_epsilon_sensitivity_exp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BM-PAM" />
       <option name="ENV_FILES" value="" />
@@ -138,7 +117,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.run_r1_r2_optimal" />
-        <item itemvalue="Python.analyze_results" />
         <item itemvalue="Python.run_epsilon_sensitivity_exp" />
       </list>
     </recent_temporary>
@@ -146,7 +124,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-4c141bd692a7-e2d783800521-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.26927.90" />
+        <option value="bundled-python-sdk-03e874896e21-d902c0275401-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.23892.439" />
       </set>
     </attachedChunks>
   </component>
@@ -174,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753788887505</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="复现表格1&#10;optimizer.py和exp_r1_r2_optimal">
+      <option name="closed" value="true" />
+      <created>1754313777343</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754313777343</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +176,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始版本" />
+    <MESSAGE value="复现表格1&#10;optimizer.py和exp_r1_r2_optimal" />
+    <option name="LAST_COMMIT_MESSAGE" value="复现表格1&#10;optimizer.py和exp_r1_r2_optimal" />
   </component>
 </project>
