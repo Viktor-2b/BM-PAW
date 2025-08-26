@@ -166,21 +166,20 @@ def plot_3d_surface(config):
     ax = fig.add_subplot(111, projection='3d')
 
     vmin, vmax = np.min(z_processed), np.max(z_processed)
-    surf = ax.plot_surface(x, y, z_processed, cmap=config['cmap'], zorder=1)
-    # 1. 把3D曲面画在底层
+    surf = ax.plot_surface(x, y, z_processed, cmap=config['cmap'], linewidth=0,
+                           antialiased=True, rcount=100, ccount=100, vmin=vmin, vmax=vmax)
+    # # 计算等高线投影
+    # if z.min()>0:
+    #     contourf_offset=vmin * 1.1
+    # else:
+    #     contourf_offset = vmax +  0.1 * (vmax - vmin)
+    # ax.contourf(x, y, z_processed, zdir='z', offset=contourf_offset,
+    #             cmap=config['cmap'], alpha=0.7)
 
-    # 2. 把等高线图放在它物理位置的下方
-    contour_offset = vmin - 0.1 * (vmax - vmin)
+    ax.set_xlabel(config['x_label'], labelpad=15)
+    ax.set_ylabel(config['y_label'], labelpad=15)
 
-    # 3. 告诉渲染器，无论物理位置如何，等高线图必须在顶层被渲染
-    ax.contourf(x, y, z_processed, zdir='z', offset=contour_offset,
-                cmap=config['cmap'], alpha=0.5, zorder=10)
-
-    ax.set_xlabel(config['x_label'], labelpad=25)
-    ax.set_ylabel(config['y_label'], labelpad=25)
-    ax.set_zlabel(config['z_label'], labelpad=20)
-
-    cbar = fig.colorbar(surf, shrink=0.6, aspect=10, pad=0.15, ticks=config['colorbar_ticks'])
+    cbar = fig.colorbar(surf, shrink=0.6, aspect=10, pad=0, ticks=config['colorbar_ticks'])
     cbar.set_label(config['z_label'])
 
     elev = config.get('view_init_elev', 25)

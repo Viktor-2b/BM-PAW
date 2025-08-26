@@ -75,6 +75,9 @@ class Simulator:
                     # Case 1 attacker_innocent
                     attacker_reward_bm_paw += block_reward
                     attacker_reward_paw += block_reward
+                elif rand < (1 - self.r1) * self.alpha + self.beta + self.eta + self.delta:
+                    # Case 2 others
+                    pass
                 elif rand < (1 - self.r1) * self.alpha + self.beta:
                     # Case 3 victim
                     attacker_reward_bm_paw += share_r1
@@ -83,9 +86,6 @@ class Simulator:
                     # Case 4 target
                     target_reward_bm_paw += block_reward
                     target_reward_paw += block_reward
-                elif rand < (1 - self.r1) * self.alpha + self.beta + self.eta + self.delta:
-                    # Case 2 others
-                    pass
                 else:  # 剩余的 r1 * alpha 部分
                     # Case 5 attacker_infiltration
                     state = 'WITHHOLDING'

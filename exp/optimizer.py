@@ -134,7 +134,7 @@ def attacker_reward(r_vars, alpha, beta, eta, gamma, epsilon1, epsilon2):
     # 6. 计算收益 Ra
     total_reward_with_bribe = r_imr + r_sr + r_fr_accept - r_bm
     total_reward_without_bribe = r_imr + r_sr + r_fr_deny
-    return max(total_reward_with_bribe,total_reward_without_bribe)
+    return r_imr + r_sr + r_fr_accept
 
 
 def optimize_r(alpha, beta, eta, gamma, grid_density):

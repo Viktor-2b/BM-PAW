@@ -2,6 +2,23 @@
   <dictionary name="project">
     <words>
       <w>bfgs</w>
+      <w>coolwarm</w>
+      <w>figsize</w>
+      <w>fontset</w>
+      <w>fontsize</w>
+      <w>labelsize</w>
+      <w>linestyle</w>
+      <w>linestyles</w>
+      <w>markersize</w>
+      <w>mathptmx</w>
+      <w>ncol</w>
+      <w>titlesize</w>
+      <w>usepackage</w>
+      <w>usetex</w>
+      <w>varepsilon</w>
+      <w>vmax</w>
+      <w>vmin</w>
+      <w>ytick</w>
     </words>
   </dictionary>
 </component>
