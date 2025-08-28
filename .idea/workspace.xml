@@ -4,25 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9327baea-2697-4cfc-8c14-48a1dfd56771" name="更改" comment="复现表格1&#10;optimizer.py和exp_r1_r2_optimal">
-      <change afterPath="$PROJECT_DIR$/draw_dotted_line.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw_heat_map.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw_table_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/Heatmap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/RR_Attack.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/RR_Honest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extracter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+    <list default="true" id="9327baea-2697-4cfc-8c14-48a1dfd56771" name="更改" comment="重绘图表">
+      <change afterPath="$PROJECT_DIR$/pdf_crop.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyze_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp/analyze_results.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp_r1_r2_optimal.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp/exp_r1_r2_optimal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp/optimizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_alpha_eta_sensitivity_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp/run_alpha_eta_sensitivity_exp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_epsilon_sensitivity_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp/run_epsilon_sensitivity_exp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_r1_r2_optimal.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp/run_r1_r2_optimal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp/simulator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_dotted_line.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_dotted_line.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_heat_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_heat_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_table_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_radar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp/visualization.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +52,7 @@
     "Python.draw_dotted_line.executor": "Run",
     "Python.draw_heat_map.executor": "Run",
     "Python.draw_heat_map_saved.executor": "Run",
+    "Python.draw_radar.executor": "Run",
     "Python.draw_table_1.executor": "Run",
     "Python.exp_r1_r2_optimal.executor": "Run",
     "Python.experiment.executor": "Run",
@@ -73,6 +62,7 @@
     "Python.gpt.executor": "Run",
     "Python.optimizer.executor": "Run",
     "Python.origin.executor": "Run",
+    "Python.pdf_crop.executor": "Run",
     "Python.ploter.executor": "Run",
     "Python.reproduce.executor": "Run",
     "Python.run.executor": "Run",
@@ -146,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754830770736</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="重绘图表">
+      <option name="closed" value="true" />
+      <created>1756207114779</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756207114779</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +161,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始版本" />
     <MESSAGE value="复现表格1&#10;optimizer.py和exp_r1_r2_optimal" />
-    <option name="LAST_COMMIT_MESSAGE" value="复现表格1&#10;optimizer.py和exp_r1_r2_optimal" />
+    <MESSAGE value="重绘图表" />
+    <option name="LAST_COMMIT_MESSAGE" value="重绘图表" />
   </component>
 </project>
